@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+   body  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #69aeb7;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px 50px;
+}
+
+
+.logo {
+    color: rgb(207, 154, 154);
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgb(246, 170, 170);
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+
+.nav-links a:hover {
+    color: #00bcd4;
+}
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+</body>
+</html>
