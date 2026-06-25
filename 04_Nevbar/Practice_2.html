@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Navigation Bar</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-top: 70px;
+        }
+ 
+        /* Navigation Bar Container */
+        nav {
+            background: linear-gradient(90deg, #1a1a2e 0%, #16213e 100%);
+            padding: 0 50px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            z-index: 100;
+        }
+ 
+        /* Flexbox Container for Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+ 
+        /* Logo Styling */
+        .logo {
+            font-size: 26px;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+ 
+        .logo:hover {
+            color: #00d4ff;
+            transform: scale(1.05);
+        }
+ 
+        /* Navigation Menu - Flexbox */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 0;
+            align-items: center;
+        }
+ 
+        /* Navigation Items */
+        .nav-item {
+            margin: 0;
+        }
+ 
+        /* Navigation Links */
+        .nav-link {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 25px;
+            display: block;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+ 
+        /* Hover Effect - Bottom Border Animation */
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #0099ff);
+            transition: width 0.3s ease;
+        }
+ 
+        .nav-link:hover {
+            color: #00d4ff;
+            background: rgba(0, 212, 255, 0.1);
+        }
+ 
+        .nav-link:hover::after {
+            width: 100%;
+        }
+ 
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 120px 20px;
+        }
+ 
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+ 
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+ 
+        .hero-btn {
+            padding: 12px 35px;
+            background: #00d4ff;
+            color: #1a1a2e;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+ 
+        .hero-btn:hover {
+            background: #0099ff;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.4);
+        }
+ 
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                padding: 0 20px;
+            }
+ 
+            .navbar {
+                height: 60px;
+            }
+ 
+            .logo {
+                font-size: 20px;
+            }
+ 
+            .nav-menu {
+                flex-direction: column;
+                position: fixed;
+                left: -100%;
+                top: 60px;
+                flex-direction: column;
+                background: #1a1a2e;
+                width: 100%;
+                text-align: center;
+                transition: 0.3s;
+                gap: 0;
+            }
+ 
+            .nav-menu.active {
+                left: 0;
+            }
+ 
+            .nav-link {
+                padding: 20px;
+                width: 100%;
+            }
+ 
+            .hero h1 {
+                font-size: 32px;
+            }
+ 
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="navbar">
+            <!-- Logo -->
+            <a href="#" class="logo">MyBrand</a>
+ 
+            <!-- Navigation Menu -->
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Portfolio</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Website</h1>
+        <p>Creating an amazing experiences with modern design and technology</p>
+        <button class="hero-btn">Get Started</button>
+    </section>
+</body>
+</html>
